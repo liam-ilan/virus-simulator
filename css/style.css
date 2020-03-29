@@ -1,0 +1,63 @@
+html, body {
+  background-color: #111;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.particle {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 100px;
+  position: absolute;
+}
+
+.stat {
+  display: inline;
+}
+
+.slider-container {
+  margin: 10px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#container {
+  box-sizing: border-box;
+  width: 60vw;
+  border-right: 2px solid white;
+  float: left;
+}
+
+#stats {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
+
+#simulation {
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#control {
+  text-align: center;
+  width: 40vw;
+  float:right;
+}
+
+#restart {
+  background-color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+}

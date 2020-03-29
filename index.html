@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Viral Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <h1>Viral Playground</h1>
+    <h2>A playground to simulate how a virus spreads</h2>
+    <h3>Liam Ilan</h3>
+
+    <div id="container">
+      <div id="simulation"></div>
+
+      <div id="stats">
+        <div id="deaths" class="stat"></div> | 
+        <div id="infected" class="stat"></div> | 
+        <div id="immune" class="stat"></div> |  
+        <div id="untouched" class="stat"></div>
+      </div>
+    </div>
+
+    <div id="control">
+      <button id="restart">Restart</button> </br>
+
+      <div class="slider-container">
+        <span class="label">Severity</span>
+        0 <input type="range" min="0" max="1" step = "0.1" value="0.2" class="slider" id="severity"> 1
+      </div>
+      <div class="slider-container">
+        <span class="label">Recovery Time</span>
+        0 <input type="range" min="0" max="1000" step = "1" value="300" class="slider" id="recovery"> 1000
+      </div>
+      <div class="slider-container">
+        <span class="label">Movement Speed</span>
+        0 <input type="range" min="0" max="20" step = "1" value="10" class="slider" id="activity"> 20
+      </div>
+      <div class="slider-container">
+        <span class="label">Infection Radius</span>
+        0 <input type="range" min="0" max="50" step = "1" value="15" class="slider" id="radius"> 50
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
