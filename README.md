@@ -13,6 +13,8 @@ Each particle (person) has a set of attributes:
 - Severity: How likely the virus is to kill the particle (remove the particle).
 - Infection Probability: For each frame a particle is in the radius of an infected particle, this is the chance for it to get infected.
 
+![](./demo.gif)
+
 The worlds edges can be either wrapping or blocking. In the case of this simulation, I chose wrapping.
 
 In my version the simulation, there are only 4 dynamic variables (Severity, Recovery Time, Movement Speed, Infection Radius). The population is set at 100, and the infection probability is set to 0.01 (1% every frame).
