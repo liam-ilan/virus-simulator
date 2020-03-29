@@ -49,6 +49,9 @@ class Particle {
     // init state
     this.setState('susceptible')
 
+    // flag
+    this.dead = false
+
     // init time
     this.infectedTime = Infinity
     this.time = 0
@@ -104,8 +107,12 @@ class Particle {
 
   // one cycle of loop
   loop() {
+
     // update state
-    if (this.time - this.infectedTime === world.recoveryTime) {
+    if (this.time - this.infectedTime > world.recoveryTime && this.dead !== true) {
+      // flag
+      this.dead = true
+
       // set immune if enough time passed
       this.setState('immune')
 
