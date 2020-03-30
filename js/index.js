@@ -100,6 +100,7 @@ class Particle {
   }
 
   kill() {
+    console.log('hi')
     simulationEl.removeChild(this.el)
     particleList = particleList.filter((particle) => particle.id !== this.id)
     delete this
@@ -168,7 +169,7 @@ function start () {
   particleList.forEach((item) => item.kill())
 
   // make 100 particles
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < world.population; i++) {
 
     // particle
     let particle = new Particle()
@@ -199,7 +200,7 @@ setInterval(() => {
 start()
 
 // slider events
-severitySlider.addEventListener('change', () => world.severity = parseInt(severitySlider.value));
+severitySlider.addEventListener('change', () => world.severity = Number(severitySlider.value));
 recoverySlider.addEventListener('change', () => world.recoveryTime = parseInt(recoverySlider.value));
 activitySlider.addEventListener('change', () => world.activity = parseInt(activitySlider.value));
 radiusSlider.addEventListener('change', () => world.infectionRadius = parseInt(radiusSlider.value));
